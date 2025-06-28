@@ -10,4 +10,21 @@ Schematic:
 Rendered Pictures:
 
 
+BOM:
+| Component             | Description                          |
+|----------------------|--------------------------------------|
+| OLED 128x64          | Small display for state text       |
+| Arduino Nano         | Microcontroller for logic and control|
+| 3AAA Battery Case    | Holds 3 AAA batteries to power servo|
+| 9V Battery           | Powers the arduino nano       |
+| 10k Ohm Resistor     | Resistor for the OLED display    |
+| 10µF Capacitor       | Ceramic capacitor for OLED       |
+| Case Top             | Rotating part of the timer      |
+| Case Bottom          | Bottom part of the enclosure  |
+| Case Body            | Main middle structure of the case   |
+| 3 Push Buttons       | Input for user interaction|
+| Servo                | Indicate state progress   |
+
+
+
 
