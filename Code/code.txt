@@ -1,0 +1,179 @@
+#include <Servo.h>
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define w 128
+#define h 64
+
+#define oled_mosi 11
+#define oled_clk 13
+#define oled_cs 10
+#define oled_reset 8
+#define oled_dc 7
+
+unsigned long reps = 0;
+bool showText = true;
+
+/* 
+default = 0
+study = 1
+short_break = 2
+long_break = 3
+1 - 2 - 1 - 2 - 1 - 3
+
+reps % 3 == 0: 
+state = 3
+
+else 
+state = 2
+*/
+
+const unsigned long study_l = 25UL * 60UL * 1000UL;
+const unsigned long break1_l = 5UL * 60UL * 1000UL; 
+const unsigned long break2_l = 15UL * 60UL * 1000UL;
+
+unsigned long t0 = 0;
+unsigned long lastBlink = 0;
+
+enum state { study, break1, break2 };
+state currentState = study;
+
+/*
+studyAngle = .24;
+break1Angle = 1.2;
+break2Angle = .4;
+*/
+
+Servo s;
+int servoPin = 9;
+unsigned long lastUpdate = 0;
+int servoPos = 0;
+int pos0 = 0;
+
+Adafruit_SSD1306 display(w, h, &SPI, oled_dc, oled_reset, oled_cs);
+
+void setup() {
+  Serial.begin(9600);
+  
+  if (!display.begin(SSD1306_SWITCHCAPVCC)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for (;;); 
+  }
+  
+  display.clearDisplay();
+  display.display();
+  t0 = millis();
+  s.attach(servoPin);
+  s.write(0);
+}
+
+void loop() {
+  unsigned long t = millis();
+  unsigned long tx = t - t0;
+
+  updateServo(tx);
+
+  switch (currentState) {
+    case study:
+      if (tx >= study_l) {
+        reps++;
+        if (reps % 3 == 0) {
+          switchToState(break2);
+        } else {
+          switchToState(break1);
+        }
+      } else {
+        blinkText("Study");
+      }
+      break;
+
+    case break1:
+      if (tx >= break1_l) {
+        switchToState(study);
+      } else {
+        blinkText("Short Break");
+      }
+      break;
+
+    case break2:
+      if (tx >= break2_l) {
+        switchToState(study);
+      } else {
+        blinkText("Long Break");
+      }
+      break;
+  }
+}
+
+void switchToState(state newState) {
+  currentState = newState;
+  t0 = millis();
+  showText = true;
+  display.clearDisplay();
+  display.display();
+
+  pos0 = servoPos;
+  lastUpdate = millis();
+}
+
+void blinkText(const char* msg) {
+  unsigned long currentMillis = millis();
+  if (currentMillis - lastBlink >= 1000) {
+    lastBlink = currentMillis;
+    showText = !showText;
+    display.clearDisplay();
+    if (showText) {
+      display.setTextSize(2);
+      display.setTextColor(SSD1306_WHITE);
+      int16_t x1, y1;
+      uint16_t wi, he;
+      display.getTextBounds(msg, 0, 0, &x1, &y1, &wi, &he);
+      display.setCursor((w - wi) / 2, (h - he) / 2);
+      display.println(msg);
+    }
+    display.display();
+  }
+}
+
+void updateServo(unsigned long tx){
+  unsigned long length = 0;
+  switch(currentState){
+    case study:
+    length = study_l;
+    break;
+    case break1:
+    length = break1_l;
+    break;
+    case break2:
+    length = break2_l;
+    break;
+  }
+
+  if (tx > length){
+    tx = length;
+  }
+  
+  float progress = (float)tx/length;
+  float angle;
+  if (progress <= .5){
+    angle = pos0 + (progress/.5) * 180.0;
+  }
+  else {
+    angle = pos0 + (1- (progress-.5)/.5) * 180.0;
+  }
+
+  if (angle > 180){
+    angle = 180;
+  }
+  if (angle < 0){
+    angle = 0;
+  }
+
+  unsigned long now = millis();
+  if (now - lastUpdate >= 20){
+    s.write((int)angle);
+    servoPos = (int)angle;
+    lastUpdate = now;
+  }
+}

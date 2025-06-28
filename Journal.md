@@ -14,3 +14,16 @@ I learned the difference between SPI and I2C. SPI is good for constant streams o
 
 (45 minutes)
 I also started on the CAD. I got all of the different electrical components and started putting them together in one file and arranging them as I think I will on the actual design. I might use a breadboard though, as that would be much easier to design around to get the components to fit. I will have to see. 
+
+June 28 (2 hours)
+I completed the rest of the CAD design for the bottom, the surrounding case with incriptions for the buttons, and the top piece that will spin around on the servo. 
+
+I am researching code to figure out how I can do the servo with the nano. 
+
+(2 hours)
+
+I finished writing all of the Arduino code. I had to code the OLED to blink text indicating the phase and I also had to write the code to control state switching, as well as the code to control the gradual movement of the servo, which varies according to what phase the machine is in. This took a while but since I have some familiarity with the Arduino language it wasn't a hopeless endeavor. I wrote all of the code in the Arduino IDE but I copy and pasted it into a txt format to make it easier to read. 
+
+I didn't know that you couldn't move the servo 360 degrees, so I had to adjust it to work for 180 degrees. Also, after doing research for the code I started poking around in the OLED datasheet and figured out that I have to connect the VSS and VCOMPH and VLSS to various resistors and capacitors with external connections between these pins. 
+
+Total time = 5 hours and 15 minutes
