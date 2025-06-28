@@ -26,6 +26,6 @@ I finished writing all of the Arduino code. I had to code the OLED to blink text
 
 I didn't know that you couldn't move the servo 360 degrees, so I had to adjust it to work for 180 degrees. Also, after doing research for the code I started poking around in the OLED datasheet and figured out that I have to connect the VSS and VCOMPH and VLSS to various resistors and capacitors with external connections between these pins. 
 
-I thought I finished this, but then I remembered that I have to add funcitonality for the 3 push buttons. Oops. 
+I thought I finished this, but then I remembered that I have to add funcitonality for the 3 push buttons. Oops. I updated the code to account for all three of the buttons. 
 
 Total time = 5 hours and 15 minutes
