@@ -7,7 +7,15 @@ I made this because I love using the Podomoro timer website and I think it would
 
 Schematic:
 
+<img width="603" alt="Screenshot 2025-06-28 at 9 49 00 PM" src="https://github.com/user-attachments/assets/e9cb6bea-1aa8-4037-a737-3815d77975a1" />
+
+
 Rendered Pictures:
+
+<img width="486" alt="Screenshot 2025-06-28 at 12 56 31 PM" src="https://github.com/user-attachments/assets/a56b7580-7c13-4597-a2de-bbd89e97cdb1" />
+<img width="536" alt="Screenshot 2025-06-28 at 12 56 05 PM" src="https://github.com/user-attachments/assets/f9406792-48c9-43b1-8ef2-89cf3ba177ec" />
+<img width="594" alt="Screenshot 2025-06-28 at 12 55 36 PM" src="https://github.com/user-attachments/assets/c3041884-25dc-465d-91b6-8e077919ca7c" />
+
 
 
 BOM:
@@ -21,7 +29,7 @@ BOM:
 | **10µF Capacitor**     | Ceramic capacitor for OLED            | [Mouser](https://www.mouser.com/ProductDetail/Vishay-BC-Components/D471K25X5FL63L6R?qs=WcHCFKihsBqnFBaLsk7srQ%3D%3D)  | \$0.58 |
 | **Case Top**           | Rotating part of the timer            | Ship through Hack Club                                                                                                | N/A    |
 | **Case Bottom**        | Bottom part of the enclosure          | Ship through Hack Club                                                                                                | N/A    |
-| **Case Body**          | Main middle structure of the case     | (Add if source exists)                                                                                                | N/A    |
+| **Case Body**          | Main middle structure of the case     | Ship through Hack Club                                                                                                | N/A    |
 | **3 Push Buttons**     | Input for user interaction            | [DigiKey](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices-/TS02-66-60-BK-160-LCR-D/15634268) | \$0.30 |
 | **Servo (SG90)**       | Indicates state progress              | [Alibaba](https://www.alibaba.com/product-detail/Stock-9G-Micro-Servo-Motor-SG90_1601038670928.html)                  | \$0.57 |
 
