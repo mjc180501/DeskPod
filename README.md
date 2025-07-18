@@ -19,19 +19,21 @@ Rendered Pictures:
 
 
 BOM:
-| Component              | Description                           | Link                                                                                                               | Cost   |
-| ---------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------ |
-| **OLED 128x64**        | Small display for state text          | [Alibaba](https://www.alibaba.com/product-detail/0-96-inch-OLED-White-Display_1600201722129.html)                  | \$1.00 |
-| **Arduino Nano**       | Microcontroller for logic and control | [Alibaba](https://www.alibaba.com/pla/good-quality-Arduino-Nano-V30-CH340G_1600942840347.html)                     | \$2.20 |
-| **3×AAA Battery Case** | Holds 3 AAA batteries to power servo  | [Alibaba](https://www.alibaba.com/product-detail/3AAA-Battery-Holder-case-3-Slots_1601258157257.html)              | \$0.20 |
-| **9V Battery**         | Powers the Arduino Nano               | [Alibaba](https://www.alibaba.com/product-detail/GMCELL-Heavy-Duty-Battery-Carbon-Zinc_1600319349029.html)         | \$0.22 |
-| **10kΩ Resistor**      | Resistor for the OLED display         | Already have                                                                                                       | N/A    |
-| **10µF Capacitor**     | Ceramic capacitor for OLED            | [Alibaba](https://www.alibaba.com/product-detail/Ceramic-Capacitor-WYO472MCMCF0KR-1KV221-P-5mm_1601422414216.html) | \$0.10 |
-| **Case Top**           | Rotating part of the timer            | Ship through Hack Club                                                                                             | N/A    |
-| **Case Bottom**        | Bottom part of the enclosure          | Ship through Hack Club                                                                                             | N/A    |
-| **Case Body**          | Main middle structure of the case     | Ship through Hack Club                                                                                             | N/A    |
-| **3 Push Buttons**     | Input for user interaction            | [Alibaba](https://www.alibaba.com/product-detail/Original-12-12-5MM-Tact-Switch_1601047682532.html)                | \$0.30 |
-| **Servo (SG90)**       | Indicates state progress              | [Alibaba](https://www.alibaba.com/product-detail/Stock-9G-Micro-Servo-Motor-SG90_1601038670928.html)               | \$0.57 |
+# Bill of Materials
+
+| Component              | Description                           | Link                                                                                                                                                                                                                                               | Cost  |
+|------------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
+| **OLED 128x64**        | Small display for state text           | [AliExpress](https://www.aliexpress.us/item/3256805954920554.html)                                                                                                                                                                                | $0.99 |
+| **Arduino Nano**       | Microcontroller for logic and control  | [AliExpress](https://www.aliexpress.us/item/3256809081358829.html)                                                                                                                                                                                | $0.99 |
+| **3×AAA Battery Case** | Holds 3 AAA batteries to power servo   | [AliExpress](https://www.aliexpress.us/item/3256806038995262.html)                                                                                                                                                                                | $2.75 |
+| **9V Battery**         | Powers the Arduino Nano                | [Alibaba](https://www.alibaba.com/product-detail/GMCELL-Heavy-Duty-Battery-Carbon-Zinc_1600319349029.html)                                                                                                                                        | $0.22 |
+| **10kΩ Resistor**      | Resistor for the OLED display          | I already have this                                                                                                                                                                                                                               | N/A   |
+| **10µF Capacitor**     | Ceramic capacitor for OLED             | [AliExpress](https://www.aliexpress.us/item/3256802104127109.html)                                                                                                                                                                                | $1.50 |
+| **Case Top**           | Rotating part of the timer             | I have access to a 3D printer                                                                                                                                                                                                                     | N/A   |
+| **Case Bottom**        | Bottom part of the enclosure           | I have access to a 3D printer                                                                                                                                                                                                                     | N/A   |
+| **Case Body**          | Main middle structure of the case      | I have access to a 3D printer                                                                                                                                                                                                                     | N/A   |
+| **3 Push Buttons**     | Input for user interaction             | [AliExpress](https://www.aliexpress.us/item/2251832629654875.html)                                                                                                                                                                                | $1.56 |
+| **Servo (SG90)**       | Indicates state progress               | [AliExpress](https://www.aliexpress.us/item/3256807057292912.html)                                                                                                                                                                                | $2.10 |
 
 
 
