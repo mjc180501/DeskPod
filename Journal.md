@@ -5,7 +5,7 @@ description: "An electronic spinning Podmoro timer for my desk with display powe
 created_at: "2024-06-27"
 ---
 
-Total time = 5 hours and 15 minutes
+Total time = 5 hours and 30 minutes
 
 June 27: (30 min)
 I made the schematic for my design. It has two battery sources, one 9V and one 5V. I have an OLED-120064D and a servo connected to three buttons (one for start, one for reset, and one for stop). Everything is wired to the arduino nano. The 9V is for the nano and the 5V is for the servo. 
