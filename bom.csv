@@ -3,6 +3,10 @@ OLED 128x64,Small display for state text,https://www.aliexpress.us/item/32568059
 Arduino Nano,Microcontroller for logic and control,https://www.aliexpress.us/item/3256809081358829.html,$0.99
 3×AAA Battery Case,Holds 3 AAA batteries to power servo,https://www.aliexpress.us/item/3256806038995262.html,$2.75
 9V Battery,Powers the Arduino Nano,https://www.alibaba.com/product-detail/GMCELL-Heavy-Duty-Battery-Carbon-Zinc_1600319349029.html,$0.22
+10kΩ Resistor,Resistor for the OLED display,,N/A
 10µF Capacitor,Ceramic capacitor for OLED,https://www.aliexpress.us/item/3256802104127109.html,$1.50
+Case Top,Rotating part of the timer,,N/A
+Case Bottom,Bottom part of the enclosure,,N/A
+Case Body,Main middle structure of the case,,N/A
 3 Push Buttons,Input for user interaction,https://www.aliexpress.us/item/2251832629654875.html,$1.56
 Servo (SG90),Indicates state progress,https://www.aliexpress.us/item/3256807057292912.html,$2.10
